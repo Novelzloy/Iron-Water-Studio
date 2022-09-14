@@ -69,16 +69,7 @@ func versionComparable(_ mainStr: String, _ comparableStr: String) throws -> Com
             locale: nil
         )
     }
-//    } else {
-//        let zeros = Array(repeating: "0", count: abs(zeroDifferent))
-//        if zeroDifferent > 0 {
-//            mainStrDotted.append(contentsOf: zeros)
-//        } else {
-//            comparableStrDotted.append(contentsOf: zeros)
-//        }
-//        return comparableStrDotted.joined(separator: separator)
-//            .compare(comparableStrDotted.joined(separator: separator), options: .numeric)
-//    }
+
     return .orderedDescending
 }
 
