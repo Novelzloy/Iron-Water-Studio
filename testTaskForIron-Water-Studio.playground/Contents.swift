@@ -20,7 +20,10 @@ func versionComparable(_ mainStr: String, _ comparableStr: String) throws -> Com
     let result = Array(repeating: "0.", count: dotsCount)
     comparableStrDotted.insert(contentsOf: result, at: 0)
     mainStrDotted.insert(contentsOf: result, at: 0)
-    
+    print(mainStrDotted)
+    print(comparableStrDotted)
+//    print(result)
+
     let zeroDifferent = mainStrDotted.count - comparableStrDotted.count
     
     if zeroDifferent == 0 {
@@ -62,8 +65,6 @@ var d = try versionComparable(".0", "1")
 var e = try versionComparable("1.3", "1.2")
 var j = try versionComparable("1.3", "1.2.4")
 var f = try versionComparable(".1", "0.1")
-
-
 
 let results = [a,b,c,d,e,j,f].map { $0.result }
 for result in results {
