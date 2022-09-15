@@ -20,9 +20,6 @@ func versionComparable(_ mainStr: String, _ comparableStr: String) throws -> Com
     let result = Array(repeating: "0.", count: dotsCount)
     comparableStrDotted.insert(contentsOf: result, at: 0)
     mainStrDotted.insert(contentsOf: result, at: 0)
-    print(mainStrDotted)
-    print(comparableStrDotted)
-//    print(result)
 
     let zeroDifferent = mainStrDotted.count - comparableStrDotted.count
     
