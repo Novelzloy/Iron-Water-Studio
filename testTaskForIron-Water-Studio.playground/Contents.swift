@@ -51,10 +51,10 @@ var d = try versionComparable(".0", "1")
 var e = try versionComparable("1.3", "1.2")
 var j = try versionComparable("1.3", "1.2")
 var f = try versionComparable("1.2.3", "1.2.4")
-var g = try versionComparable(".1", "0.1")
 
 
-let results = [a,b,c,d,e,j,f,g].map { $0.result }
+
+let results = [a,b,c,d,e,j,f].map { $0.result }
 for result in results {
   print(result)
 }
