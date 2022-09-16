@@ -3,17 +3,12 @@ import Foundation
 func versionComparable(_ mainStr: String, _ comparableStr: String) -> ComparisonResult {
 
     let separator = "."
-    var dotsCount = 0
 
     var mainStrDotted = mainStr.components(separatedBy: separator)
     var comparableStrDotted = comparableStr.components(separatedBy: separator)
     
     let mainStrDottedJoined = mainStrDotted.map{$0 == "" ? "0" : $0}.joined(separator: separator)
     let comparableStrDottedJoined = comparableStrDotted.map{$0 == "" ? "0" : $0}.joined(separator: separator)
-    
-    let result = Array(repeating: "0.", count: dotsCount)
-    comparableStrDotted.insert(contentsOf: result, at: 0)
-    mainStrDotted.insert(contentsOf: result, at: 0)
 
     let zeroDifferent = mainStrDotted.count - comparableStrDotted.count
     
